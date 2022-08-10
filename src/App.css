@@ -1,0 +1,37 @@
+.app{
+  overflow: hidden;
+}
+
+.main-content {
+  background-color: #374151;
+  min-height: 93.7vh;
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+} 
+
+.table{
+  margin-top: 20px;
+}
+
+tr {
+  height: 40px !important;
+}
+
+
+td {
+  height: 40px !important;
+  padding: 5px !important;
+  text-align: center !important;
+}
+
+/* media query all phones */
+@media only screen and (max-width: 600px) {
+  .app{
+    overflow-y: auto;
+    
+  }
+
+  .main-content {
+    min-height: auto;
+  }
+}
