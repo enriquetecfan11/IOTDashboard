@@ -6,6 +6,7 @@ And IOT Dashboard for view the items of the simple-database
 <div  align="center">
 🚧 Iotdashboard 🚀 Under construction... 🚧
 </div>
+<br />
 <p align="center">
 <img  alt="Github top language"  src="https://img.shields.io/github/languages/top/enriquetecfan11/iotdashboard?color=56BEB8">
 <img  alt="Github language count"  src="https://img.shields.io/github/languages/count/enriquetecfan11/iotdashboard?color=56BEB8">
@@ -18,7 +19,7 @@ And IOT Dashboard for view the items of the simple-database
 
 This dashboard is an add-on to visualize the things you do in SimpleServer.
 
-This is the SimpleServer repo https://github.com/enriquetecfan11/SimpleServer
+SimpleServer repo https://github.com/enriquetecfan11/SimpleServer
   
 ## :rocket: Technologies ##
 The following tools were used in this project:
