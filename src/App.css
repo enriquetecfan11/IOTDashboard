@@ -1,4 +1,4 @@
-.app{
+.app {
   overflow: hidden;
 }
 
@@ -7,31 +7,47 @@
   min-height: 93.7vh;
   font-size: calc(10px + 2vmin);
   text-align: center;
-} 
+  padding: 20px; /* Agregué un padding para mejorar el espacio */
+}
 
-.table{
+.table {
   margin-top: 20px;
+  width: 100%;
+  overflow-x: auto; /* Hace que la tabla sea desplazable horizontalmente en dispositivos móviles */
 }
 
-tr {
-  height: 40px !important;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-
-td {
-  height: 40px !important;
-  padding: 5px !important;
-  text-align: center !important;
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-/* media query all phones */
+/* Media query para dispositivos con pantalla pequeña, por ejemplo, smartphones */
 @media only screen and (max-width: 600px) {
-  .app{
-    overflow-y: auto;
-    
+  .app {
+    overflow-y: auto; /* Cambiado a overflow-y para permitir desplazamiento vertical */
+    background-color: #374151;
   }
 
   .main-content {
-    min-height: auto;
+    min-height: auto; /* Quita la altura mínima en pantallas pequeñas */
+    background-color: #374151;
+    padding: 10px; /* Reduzco el padding para dispositivos móviles */
+    height: 100vh; /* Agregado para ocupar el 100% de la altura de la ventana */
+  }
+
+  .table {
+    width: 100%;
+    overflow-x: auto; /* Hace que la tabla sea desplazable horizontalmente en dispositivos móviles */
+  }
+
+  th, td {
+    padding: 5px; /* Reduzco el padding para aprovechar mejor el espacio */
+    font-size: 12px; /* Tamaño de fuente más pequeño para dispositivos móviles */
   }
 }
