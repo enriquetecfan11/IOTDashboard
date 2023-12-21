@@ -29,7 +29,7 @@ import TableRow from '@mui/material/TableRow';
 
 import Paper from '@mui/material/Paper';
 import LinearProgress from '@mui/material/LinearProgress';
-import { Typography } from "@mui/material";
+import { Tab, Typography } from "@mui/material";
 
 import Navbar from './navbar';
 
@@ -38,7 +38,7 @@ const Medidas = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/miniestacion')
+    fetch('http://192.168.1.77:5000/api/miniestacion')
       .then(res => res.json())
       .then(json => setData(json))
       .catch(error => console.error(error), setIsLoading(true))
@@ -80,11 +80,11 @@ const Medidas = () => {
                         ID
                       </Typography>
                     </TableCell>
-                    <TableCell style={{ color: 'white', textAlign: 'center' }}>
+                    {/* <TableCell style={{ color: 'white', textAlign: 'center' }}>
                       <Typography variant="h8">
                         Dispositivo
                       </Typography>
-                    </TableCell>
+                    </TableCell> */}
                     <TableCell style={{ color: 'white', textAlign: 'center' }}>
                       <Typography variant="h8">
                         Hora
@@ -97,7 +97,17 @@ const Medidas = () => {
                     </TableCell>
                     <TableCell style={{ color: 'white', textAlign: 'center' }}>
                       <Typography variant="h8">
-                        Humedad
+                        Presion
+                      </Typography>
+                    </TableCell>
+                    <TableCell style={{ color: 'white', textAlign: 'center' }}>
+                      <Typography variant="h8">
+                        Luminosidad
+                      </Typography>
+                    </TableCell>
+                    <TableCell style={{ color: 'white', textAlign: 'center' }}>
+                      <Typography variant="h8">
+                        Altura (m)
                       </Typography>
                     </TableCell>
                     <TableCell style={{ color: 'white', textAlign: 'center' }}>
@@ -115,14 +125,14 @@ const Medidas = () => {
                           {row.id}
                         </Typography>
                       </TableCell>
-                      <TableCell style={{ color: 'white', textAlign: 'center' }}>
+                      {/* <TableCell style={{ color: 'white', textAlign: 'center' }}>
                         <Typography variant="h8">
                           {row.dispositivo}
                         </Typography>
-                      </TableCell>
+                      </TableCell> */}
                       <TableCell style={{ color: 'white', textAlign: 'center' }}>
                         <Typography variant="h8">
-                          {new Date(row.hora).toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit', fractionalSecondDigits: 3 })}
+                          {new Date(row.deviceTime).toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit', fractionalSecondDigits: 3 })}
                         </Typography>
                       </TableCell>
                       <TableCell style={{ color: 'white', textAlign: 'center' }}>
@@ -132,7 +142,17 @@ const Medidas = () => {
                       </TableCell>
                       <TableCell style={{ color: 'white', textAlign: 'center' }}>
                         <Typography variant="h8">
-                          {row.humedad}
+                          {row.presion}
+                        </Typography>
+                      </TableCell>
+                      <TableCell style={{ color: 'white', textAlign: 'center' }}>
+                        <Typography variant="h8">
+                          {row.luxes}
+                        </Typography>
+                      </TableCell>
+                      <TableCell style={{ color: 'white', textAlign: 'center' }}>
+                        <Typography variant="h8">
+                          {row.altura}
                         </Typography>
                       </TableCell>
                       <TableCell style={{ color: 'white', textAlign: 'center' }}>
